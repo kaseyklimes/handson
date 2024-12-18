@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { AlertCircle, Check, ArrowRight, Sparkles, Lock } from 'lucide-react';
 import BackgroundAnimation from './BackgroundAnimation';
 
-const API_URL = 'http://localhost:3000';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 const PasswordEntry = ({ onCorrectPassword }) => {
   const [password, setPassword] = useState('');
@@ -20,6 +20,15 @@ const PasswordEntry = ({ onCorrectPassword }) => {
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center">
+      {/* White background */}
+      <div 
+        className="fixed inset-0 bg-white"
+        style={{ 
+          width: '100vw',
+          height: '100vh',
+          zIndex: -2
+        }}
+      />
       {/* Background image */}
       <div 
         className="fixed inset-0 bg-cover bg-center opacity-90"
@@ -30,8 +39,8 @@ const PasswordEntry = ({ onCorrectPassword }) => {
           height: '100vh',
           zIndex: -1,
           filter: 'contrast(0.7) brightness(1.2)',
-          maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1) 100%)',
-          WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1) 100%)'
+          maskImage: 'linear-gradient(to bottom, rgb(255, 255, 255) 0%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, rgb(255, 255, 255) 0%, transparent 100%)'
         }}
       />
       
@@ -117,6 +126,15 @@ const LandingPage = () => {
 
   return (
     <div className="h-full w-full relative">
+      {/* White background */}
+      <div 
+        className="fixed inset-0 bg-background"
+        style={{ 
+          width: '100vw',
+          height: '100vh',
+          zIndex: -2
+        }}
+      />
       {/* Background image */}
       <div 
         className="fixed inset-0 bg-cover bg-center opacity-90"
@@ -127,8 +145,8 @@ const LandingPage = () => {
           height: '100vh',
           zIndex: -1,
           filter: 'contrast(0.7) brightness(1.2)',
-          maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1) 100%)',
-          WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1) 100%)'
+          maskImage: 'linear-gradient(to bottom, rgb(255, 255, 255) 30%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, rgb(255, 255, 255) 30%, transparent 100%)'
         }}
       />
       
