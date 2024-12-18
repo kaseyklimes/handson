@@ -257,18 +257,25 @@ const LandingPage = () => {
             <div className="max-w-6xl mx-auto px-4 py-16">
               <div className="text-center mb-12">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-8 text-ink">Supported By</h2>
-                <div className="grid grid-cols-3 gap-8 items-center justify-center max-w-2xl mx-auto">
-                <div className="text-center">
-                    The Service Guild
-                  </div>
-                  <div className="text-center">
-                    <a href="https://www.buildexante.com/" className="block">
-                      <img src="/exantelogo.png" alt="Ex/Ante" className="h-6 mx-auto" />
+                <div className="flex justify-center items-center gap-12 flex-wrap max-w-2xl mx-auto">
+                  <div className="text-[#333333]">
+                    <a href="https://serviceguild.fun/" className="block text-[#333333] no-underline">
+                      The Service Guild
                     </a>
                   </div>
-                  <div className="text-center">
-                    <a href="https://n0.computer/" className="block">
-                      <img src="https://n0.computer/img/logos/wordmark-small-gray.svg" alt="N0.Computer" className="h-6 mx-auto" />
+                  <div className="text-[#333333] font-['Berkeley_Mono']">
+                    <a href="https://hyperlink.academy/" className="block text-[#333333] no-underline">
+                      hyperlink.academy
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://www.buildexante.com/">
+                      <img src="/exantelogo.png" alt="Ex/Ante" className="h-6" />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://n0.computer/">
+                      <img src="https://n0.computer/img/logos/wordmark-small-gray.svg" alt="N0.Computer" className="h-6" />
                     </a>
                   </div>
                 </div>
