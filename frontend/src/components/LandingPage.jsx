@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { AlertCircle, Check, ArrowRight, Sparkles, Lock } from 'lucide-react';
 import BackgroundAnimation from './BackgroundAnimation';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://handson-app.herokuapp.com';
 
 const PasswordEntry = ({ onCorrectPassword }) => {
   const [password, setPassword] = useState('');
